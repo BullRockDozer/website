@@ -1,0 +1,65 @@
+<button onclick="coin_tripler()">buy coin tripler 🪙($2500)</button>
+<br />
+
+
+
+
+<html>
+    <head>
+    </head>
+    <body>
+        <button id="reset" onclick="reset()">Restart game</button>
+
+        <a href="index.html">Go back</a>
+        <br />
+        <button id="earn" onclick="earn()">Click to earn 💵 </button>
+        <br />
+        <h3>
+            you have 🪙 <span id="money">0</span>
+        </h3>
+    </body>
+</html>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    #earn {
+        background-color: green;
+        font-size: 25px;
+        padding: 10;
+        margin-top: 250px
+    }
+    h3 {
+        font-size: 50px
+    }
+    a {
+        display: block;
+        font-size: 50px;
+        margin-top: 250px
+    }
+    button {
+        font-size: 50px
+    }
+</style>
+
+<script>
+    money = 0
+    function earn() {
+        money += 1
+        document.getElementById('money').innerHTML = money
+    }
+    function reset() {
+        money = 0
+        document.getElementById('money').innerHTML = money
+        alert("game restart! you lost some 🪙 and 💵!")
+    }
+    function coin_tripler() {
+        if(money >= 2500) {
+            money += 1
+
+
+            
+        }
+    } 
+</script>
