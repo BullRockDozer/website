@@ -1,5 +1,6 @@
 <button onclick="coin_tripler()">buy coin tripler 🪙($2500)</button>
 <br />
+<br />
 
 
 
@@ -45,8 +46,9 @@
 
 <script>
     money = 0
+    gain = 1
     function earn() {
-        money += 1
+        money += gain
         document.getElementById('money').innerHTML = money
     }
     function reset() {
@@ -55,11 +57,21 @@
         alert("game restart! you lost some 🪙 and 💵!")
     }
     function coin_tripler() {
+        if(gain == 3) {
+            alert("You already have the coin tripler!")
+            return
+        }
         if(money >= 2500) {
-            money += 1
+            money -= 2500
+            gain += 2
+            alert("Coin tripler purchased! 😂")
+        }
+        else {
+            alert("Not enough money 😭")
+        }
+        
 
 
             
-        }
     } 
 </script>
